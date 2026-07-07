@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "name": "shifa",
+      "email": "safa1@gmail.com",
+      "id": "Hbk9EB66Pck"
+    },
+    {
+      "name": "shifa",
+      "email": "safa1@gmail.com",
+      "id": "Huy306bY6bs"
+    },
+    {
+      "name": "shifa",
+      "email": "shifayasmin23@gmail.com",
+      "id": "Q7oueB07-BA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
