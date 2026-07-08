@@ -27,23 +27,39 @@
 // export default App
 
 
-import React, { useEffect } from 'react'
-import { useState } from 'react'
+// import React, { useEffect } from 'react'
+// import { useState } from 'react'
+// const App = () => {
+//   const [name,setName]=useState([])
+//   useEffect(()=>{
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//     .then(res=>res.json())
+//     .then(data=>{
+//       console.log(data);
+//       setName(data)
+//     })
+//   },[])
+//   return (
+//     <div>
+//     {name.map((n)=>(
+//       <p>{n.name}</p>
+//     ))}
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import React, { useState } from 'react'
+
 const App = () => {
-  const [name,setName]=useState([])
-  useEffect(()=>{
-    fetch("https://jsonplaceholder.typicode.com/users")
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      setName(data)
-    })
-  },[])
+  const [count,setcount]=useState(0)
   return (
     <div>
-    {name.map((n)=>(
-      <p>{n.name}</p>
-    ))}
+     <h1>count is:{count}</h1>
+     <button onClick={()=>setcount(count+1)}>click</button>
     </div>
   )
 }
