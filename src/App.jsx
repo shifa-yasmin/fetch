@@ -96,15 +96,47 @@
 
 
 
-// import React from 'react'
-import Home from './Home'
+// // import React from 'react'
+// import Home from './Home'
 
+// const App = () => {
+//   return (
+//     <div>
+//       <Home name="shifa" place="karinkllathani"/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+// import React, { useEffect } from 'react'
+
+// const App = () => {
+//   useEffect(()=>{
+//    console.log("mounting");
+//    return ()=>{
+//     console.log("unmounting")
+//    }
+//   },[])
+//   return (
+//     <div>
+//      <h1>hello</h1>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import { useState } from 'react'
 const App = () => {
+
+  const [toggle,setToggle]=useState("white");
   return (
-    <div>
-      <Home name="shifa" place="karinkllathani"/>
+    <div style={{background:toggle, height:"100vh"}}>
+      <button onClick={()=>setToggle(toggle==="white"?"red":"white")}>click</button>
     </div>
   )
 }
-
 export default App
