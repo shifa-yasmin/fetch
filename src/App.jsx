@@ -94,17 +94,15 @@
 // export default App
 
 
+
+
 // import React from 'react'
 import Home from './Home'
 
 const App = () => {
   return (
     <div>
-       <Home
-       name="shifa"
-       age="18"
-       place="karinkallathani"
-       /> 
+      <Home name="shifa" place="karinkllathani"/>
     </div>
   )
 }
