@@ -129,14 +129,49 @@
 
 
 
-import { useState } from 'react'
-const App = () => {
+// import { useState } from 'react'
+// const App = () => {
 
-  const [toggle,setToggle]=useState("white");
+//   const [toggle,setToggle]=useState("white");
+//   return (
+//     <div style={{background:toggle, height:"100vh"}}>
+//       <button onClick={()=>setToggle(toggle==="white"?"red":"white")}>click</button>
+//     </div>
+//   )
+// }
+// export default App
+
+
+
+import  { useState } from 'react'
+
+const App = () => {
+  const [toggle,setToggle]=useState("")
   return (
-    <div style={{background:toggle, height:"100vh"}}>
-      <button onClick={()=>setToggle(toggle==="white"?"red":"white")}>click</button>
+ <div className='flex flex-row gap-6'>
+     <button onClick={()=>setToggle("pink")} style={{background:"pink", width:"100px", height:"100px"}}>
+           
+    </button>
+    <button  onClick={()=>setToggle("red")} style={{background:"red", width:"100px", height:"100px"}}>
+           
+    </button>
+    
+    <button onClick={()=>setToggle("yellow")} style={{background:"yellow", width:"100px", height:"100px"}}>
+           
+    </button>
+    <button onClick={()=>setToggle("green")} style={{background:"green", width:"100px", height:"100px"}}>
+           
+    </button>
+    <button onClick={()=>setToggle("blue")} style={{background:"blue", width:"100px", height:"100px"}}>
+           
+    </button>
+
+    <div style={{width:"100px", height:"100px", background:toggle}}>
+         
     </div>
+ </div>
+
   )
 }
+
 export default App
