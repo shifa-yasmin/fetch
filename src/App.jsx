@@ -72,12 +72,18 @@ import { useEffect, useState } from 'react'
 
 const App = () => {
   const [count,setCount]=useState(0)
-  useEffect(()=>{
-       setInterval(()=>{
-            setCount(count+1)
-            clearInterval(count===5)
-       },1000)
-  },[count])
+ useEffect(()=>{
+   let id=setInterval(()=>{
+    setCount((prev)=>{
+    if(prev>=5){
+      clearInterval(id)
+      return prev
+    }
+    return prev+1
+    })
+   },1000)
+   return ()=>clearInterval(id)
+ },[])
   return (
     <div>
      <h1>count is :{count}</h1>
