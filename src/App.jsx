@@ -177,18 +177,71 @@
 // export default App
 
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const App = () => {
-  const [toggle,setToggle]=useState("")
-  setInterval(()=>{
-       setToggle(toggle===""?"red":toggle==="red"?"pink":toggle==="pink"?"yellow":"green")
-  },1000)
-  return (
-    <div style={{height:"100vh", background:toggle}}>
+// const App = () => {
+//   const [toggle,setToggle]=useState("")
+//   setInterval(()=>{
+//        setToggle(toggle===""?"red":toggle==="red"?"pink":toggle==="pink"?"yellow":"green")
+//   },1000)
+//   return (
+//     <div style={{height:"100vh", background:toggle}}>
          
-    </div>
-  )
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import { useRef } from "react";
+
+// function App() {
+//   const inputRef = useRef();
+
+//   const handleClick = () => {
+//     console.log(inputRef.current)
+//     inputRef.current.focus();
+//   };
+//   return (
+//     <>
+//       <input ref={inputRef} />
+//       <button onClick={handleClick}>Focus</button>
+//     </>
+//   );
+// }
+
+// export default App;
+
+
+
+
+// const App = () => {
+//   const isLogin=true;
+//   return (
+//     <div>
+//     {isLogin?(
+//          <h1>helloo</h1>
+//     ):(
+//        <h1>hay</h1>
+//     )}
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+const App = () => {
+ const role="";
+switch(role){
+  case "admin":
+    return <h1>admin</h1>
+    case "user":
+      return   <h1>user</h1>
+      default:
+       return <h1>non</h1>
+}
 }
 
 export default App
