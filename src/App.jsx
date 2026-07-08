@@ -68,25 +68,43 @@
 
 
 
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
+
+// const App = () => {
+//   const [count,setCount]=useState(0)
+//  useEffect(()=>{
+//    let id=setInterval(()=>{
+//     setCount((prev)=>{
+//     if(prev>=5){
+//       clearInterval(id)
+//       return prev
+//     }
+//     return prev+1
+//     })
+//    },1000)
+//    return ()=>clearInterval(id)
+//  },[])
+//   return (
+//     <div>
+//      <h1>count is :{count}</h1>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React from 'react'
+import Home from './Home'
 
 const App = () => {
-  const [count,setCount]=useState(0)
- useEffect(()=>{
-   let id=setInterval(()=>{
-    setCount((prev)=>{
-    if(prev>=5){
-      clearInterval(id)
-      return prev
-    }
-    return prev+1
-    })
-   },1000)
-   return ()=>clearInterval(id)
- },[])
   return (
     <div>
-     <h1>count is :{count}</h1>
+       <Home
+       name="shifa"
+       age="18"
+       place="karinkallathani"
+       /> 
     </div>
   )
 }
