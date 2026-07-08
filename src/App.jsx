@@ -52,14 +52,35 @@
 
 
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   const [count,setcount]=useState(0)
+//   return (
+//     <div>
+//      <h1>count is:{count}</h1>
+//      <button onClick={()=>setcount(count+1)}>click</button>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import { useEffect, useState } from 'react'
 
 const App = () => {
-  const [count,setcount]=useState(0)
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+       setInterval(()=>{
+            setCount(count+1)
+            clearInterval(count===5)
+       },1000)
+  },[count])
   return (
     <div>
-     <h1>count is:{count}</h1>
-     <button onClick={()=>setcount(count+1)}>click</button>
+     <h1>count is :{count}</h1>
     </div>
   )
 }
