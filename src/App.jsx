@@ -143,34 +143,51 @@
 
 
 
-import  { useState } from 'react'
+// import  { useState } from 'react'
+
+// const App = () => {
+//   const [toggle,setToggle]=useState("")
+//   return (
+//  <div className='flex flex-row gap-6'>
+//      <button onClick={()=>setToggle("pink")} style={{background:"pink", width:"100px", height:"100px"}}>
+           
+//     </button>
+//     <button  onClick={()=>setToggle("red")} style={{background:"red", width:"100px", height:"100px"}}>
+           
+//     </button>
+    
+//     <button onClick={()=>setToggle("yellow")} style={{background:"yellow", width:"100px", height:"100px"}}>
+           
+//     </button>
+//     <button onClick={()=>setToggle("green")} style={{background:"green", width:"100px", height:"100px"}}>
+           
+//     </button>
+//     <button onClick={()=>setToggle("blue")} style={{background:"blue", width:"100px", height:"100px"}}>
+           
+//     </button>
+
+//     <div style={{width:"100px", height:"100px", background:toggle}}>
+         
+//     </div>
+//  </div>
+
+//   )
+// }
+
+// export default App
+
+
+import React, { useState } from 'react'
 
 const App = () => {
   const [toggle,setToggle]=useState("")
+  setInterval(()=>{
+       setToggle(toggle===""?"red":toggle==="red"?"pink":toggle==="pink"?"yellow":"green")
+  },1000)
   return (
- <div className='flex flex-row gap-6'>
-     <button onClick={()=>setToggle("pink")} style={{background:"pink", width:"100px", height:"100px"}}>
-           
-    </button>
-    <button  onClick={()=>setToggle("red")} style={{background:"red", width:"100px", height:"100px"}}>
-           
-    </button>
-    
-    <button onClick={()=>setToggle("yellow")} style={{background:"yellow", width:"100px", height:"100px"}}>
-           
-    </button>
-    <button onClick={()=>setToggle("green")} style={{background:"green", width:"100px", height:"100px"}}>
-           
-    </button>
-    <button onClick={()=>setToggle("blue")} style={{background:"blue", width:"100px", height:"100px"}}>
-           
-    </button>
-
-    <div style={{width:"100px", height:"100px", background:toggle}}>
+    <div style={{height:"100vh", background:toggle}}>
          
     </div>
- </div>
-
   )
 }
 
