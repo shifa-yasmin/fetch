@@ -249,21 +249,57 @@
 
 
 
-import  { useState } from 'react'
+// import  { useState } from 'react'
+// const App = () => {
+//   const [data,setdata]=useState({name:"shifa",age:19});
+//   const handle=()=>{
+//     setdata((prev)=>({
+//        ...prev,
+//       age:prev.age+1
+//     }))
+//   }
+//   return (
+//     <div>
+//     <h1>{data.name}</h1>
+//     <h1>{data.age}</h1>
+//     <button onClick={handle}>click</button>
+//     </div>
+//   )
+// }
+// export default App
 
+
+// ❌
+
+// import  { useEffect, useState } from 'react'
+// const App = () => {
+//   const [count,setCount]=useState(0);
+//   useEffect(()=>{
+//     let id=setInterval(()=>{
+//        setCount((prev)=>prev+1)
+//     },1000)
+//     return ()=>clearInterval(id)
+//   },[])
+//   return (
+//     <div>
+//     <h1>count is:{count}</h1>
+//     </div>
+//   )
+// }
+// export default App
+
+
+import React, { useState } from 'react'
 const App = () => {
-  const [data,setdata]=useState({name:"shifa",age:19});
+  const [color,setColor]=useState("pink");
   const handle=()=>{
-    setdata((prev)=>({
-       ...prev,
-      age:prev.age+1
-    }))
+        setColor((prev)=>{
+         return prev==="pink"?"red":"pink"
+        })
   }
   return (
-    <div>
-    <h1>{data.name}</h1>
-    <h1>{data.age}</h1>
-    <button onClick={handle}>click</button>
+    <div style={{background:color, height:"1000vh"}}>
+        <button onClick={()=>handle()}>click</button>
     </div>
   )
 }
