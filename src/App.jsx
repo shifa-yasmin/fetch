@@ -231,17 +231,41 @@
 
 // export default App
 
-import React from 'react'
+// import React from 'react'
+// const App = () => {
+//  const role="";
+// switch(role){
+//   case "admin":
+//     return <h1>admin</h1>
+//     case "user":
+//       return   <h1>user</h1>
+//       default:
+//        return <h1>non</h1>
+// }
+// }
+
+// export default App
+
+
+
+
+import  { useState } from 'react'
+
 const App = () => {
- const role="";
-switch(role){
-  case "admin":
-    return <h1>admin</h1>
-    case "user":
-      return   <h1>user</h1>
-      default:
-       return <h1>non</h1>
-}
+  const [data,setdata]=useState({name:"shifa",age:19});
+  const handle=()=>{
+    setdata((prev)=>({
+       ...prev,
+      age:prev.age+1
+    }))
+  }
+  return (
+    <div>
+    <h1>{data.name}</h1>
+    <h1>{data.age}</h1>
+    <button onClick={handle}>click</button>
+    </div>
+  )
 }
 
 export default App
